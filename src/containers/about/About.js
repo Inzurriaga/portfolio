@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import pictureOne from "../../assests/pictureOne.jpeg";
-import pictureTwo from "../../assests/pictureTwo.jpeg";
-import pictureThree from "../../assests/pictureThree.jpeg";
-import pictureFour from "../../assests/pictureFour.jpeg";
+import pictureOne from "../../assets/pictureOne.jpeg";
+import pictureTwo from "../../assets/pictureTwo.jpeg";
+import pictureThree from "../../assets/pictureThree.jpeg";
+import pictureFour from "../../assets/pictureFour.jpeg";
 
 export class About extends Component {
   constructor() {
