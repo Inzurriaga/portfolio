@@ -1,0 +1,33 @@
+.pokemon {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 50px 200px 100px;
+  grid-template-areas:
+    "image type" 
+    "image title"
+    "image description"
+    "image tech";
+    h3 {
+      grid-area: title;
+    }
+    h4 {
+      font-family: 'lato',Helvetica,Arial;
+      grid-area: type;
+      color: #bdbdbd;
+    }
+    p {
+      font-family: 'lato',Helvetica,Arial;
+      grid-area: description;
+    }
+    .image {
+      grid-area: image;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      img {
+        width: 60%;
+        }
+    }
+}

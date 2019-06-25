@@ -1,0 +1,57 @@
+import React, { Component } from "react";
+import { ReactComponent as SvgBackground } from "../../assests/trianglify.svg"; 
+import { ReactComponent as SvgFirstName } from "../../assests/firstName.svg";
+import { ReactComponent as SvgLastName } from "../../assests/lastName.svg";
+
+export class Header extends Component {
+  constructor() {
+    super();
+    this.state = {
+      svgTop: "0px",
+      navOpacity: 0
+    }
+  }
+
+  componentDidMount(){
+    window.addEventListener('scroll', this.headerCss);
+    this.setState({
+      navOpacity: window.scrollY / window.innerHeight
+    });
+  }
+
+  headerCss = () => {
+    this.parallax();
+    this.navOpacity();
+  }
+
+  navOpacity = () => {
+    if((window.scrollY / window.innerHeight) < 1){
+      this.setState({
+        navOpacity: window.scrollY / window.innerHeight
+      });
+    }
+  }
+
+  parallax = () => {
+    if((window.scrollY / window.innerHeight) < 1){
+      const svgTop = (window.scrollY / 4) * -1
+      this.setState({
+        svgTop: `${svgTop}px`
+      });
+    }
+  }
+
+  render() {
+    return (
+      <header>
+        <SvgBackground style={{top: this.state.svgTop}} className="background-svg"/>
+        <SvgFirstName className="name-first"/>
+        <SvgLastName className="name-last"/>
+        <nav style={{backgroundColor: `rgba(69, 69, 69, ${this.state.navOpacity})`}}>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+        </nav>
+      </header>
+    );
+  }
+}

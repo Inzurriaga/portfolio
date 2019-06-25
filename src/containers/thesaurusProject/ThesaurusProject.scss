@@ -1,0 +1,65 @@
+.thesaurus {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 50px 200px 100px;
+  grid-template-areas: 
+    "image type"
+    "image title"
+    "image description"
+    "image tech";
+    h3 {
+      grid-area: title;
+    }
+    h4 {
+      font-family: 'lato',Helvetica,Arial;
+      grid-area: type;
+      color: #bdbdbd;
+    }
+    p {
+      font-family: 'lato',Helvetica,Arial;
+      grid-area: description;
+    }
+    .image {
+      grid-area: image;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      img {
+        width: 60%;
+        }
+    }
+    .link {
+      grid-area: tech;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      a {
+        color: #ffffff;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        grid-area: tech;
+        height: 50px;
+        width: 150px;
+        text-decoration: none;
+        outline: none;
+        background: #23282e;
+        border-radius: 5px;
+        svg {
+          fill: #ffffff;
+          height: 30px;
+          width: 30px;
+        }
+        &:hover {
+          color: #bdbdbd;
+          svg {
+            fill: #bdbdbd;
+          }
+        }
+      }
+    }
+}

@@ -1,0 +1,57 @@
+.projects-container {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+  background-color: #757780;
+  background-image: url("./assets/trianglify.svg");
+  background-attachment: fixed;
+  background-size: cover;
+  h2 {
+    color: #ffffff;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 5em;
+  }
+  article{
+    overflow: hidden;
+    color: #333333;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 0px 40px 0px 40px;
+    margin: 20px;
+    height: 400px;
+    width: 80%;
+    position: relative;
+    right: -100%;
+    transition: 1s;
+    opacity: 0;
+    h3 {
+      margin: 5px;
+      font-size: 2em;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+    }
+    p {
+      font-family: 'Roboto', sans-serif;
+    }
+    &:nth-child(even) {
+      left: -100%;
+      border-radius: 40px 0px 40px 0px;
+    }
+  }
+
+  .project-animation {
+    opacity: 1;
+    right: -100px;
+    &:nth-child(even) {
+      left: -100px;
+    }
+  }
+}
