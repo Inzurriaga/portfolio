@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { ReactComponent as SvgBackground } from "../../assests/trianglify.svg"; 
-import { ReactComponent as SvgFirstName } from "../../assests/firstName.svg";
-import { ReactComponent as SvgLastName } from "../../assests/lastName.svg";
+import { ReactComponent as SvgBackground } from "../../assets/trianglify.svg"; 
+import { ReactComponent as SvgFirstName } from "../../assets/firstName.svg";
+import { ReactComponent as SvgLastName } from "../../assets/lastName.svg";
 
 export class Header extends Component {
   constructor() {
