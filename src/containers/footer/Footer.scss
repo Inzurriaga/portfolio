@@ -10,6 +10,7 @@
   flex-direction: column;
   div {
     display: flex;
+    flex-wrap: wrap;
     p {
       margin: 0 10px 0 10px;
     }

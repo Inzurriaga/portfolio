@@ -14,26 +14,24 @@
     box-shadow: 2px 5px 5px 5px #000000;
     opacity: 0;
     transition: 3s;
+    height: auto;
+    width: 30%;
     &:nth-child(1) {
-      height: 30%;
-      top: 20%;
-      left: 10%;
+      top: 10%;
+      left: 0;
       transform: rotate(-30deg);
     }
     &:nth-child(2) {
-      height: 30%;
-      top: 10%;
-      right: 10%;
+      top: 5%;
+      right: 5%;
       transform: rotate(20deg);
     }
     &:nth-child(3) {
-      height: 30%;
-      bottom: 10%;
+      bottom: -5%;
       right: 0;
       transform: rotate(-30deg);
     }
     &:nth-child(4) {
-      height: 30%;
       bottom: 0%;
       left: 0;
       transform: rotate(5deg);
@@ -61,6 +59,14 @@
     }
     .about-animation {
       transform: translate(0%)
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .about {
+    img {
+      display: none;
     }
   }
 }

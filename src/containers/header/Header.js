@@ -48,8 +48,10 @@ export class Header extends Component {
         <SvgFirstName className="name-first"/>
         <SvgLastName className="name-last"/>
         <nav style={{backgroundColor: `rgba(69, 69, 69, ${this.state.navOpacity})`}}>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
+          <div>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+          </div>
         </nav>
       </header>
     );

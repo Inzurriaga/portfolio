@@ -8,18 +8,22 @@ header {
     width: 100%;
     z-index: 2;
     top: 0;
-    a {
-      margin: 0 80px;
-      font-family: 'Black Han Sans', sans-serif;
-      text-decoration: none;
-      cursor: pointer;
-      outline: none;
-      background: none;
-      border: none;
-      font-size: 2em;
-      color: #ffffff;
-      &:hover {
-        text-decoration: underline;
+    div {
+      width: 500px;
+      display: flex;
+      justify-content: space-around;
+      a {
+        font-family: 'Black Han Sans', sans-serif;
+        text-decoration: none;
+        cursor: pointer;
+        outline: none;
+        background: none;
+        border: none;
+        font-size: 2em;
+        color: #ffffff;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -38,8 +42,8 @@ header {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   position: relative;
-  transform: scale(1.5);
-  left: 10%;
+  width: 50%;
+  height: auto;
   top: 20%;
   z-index: 1;
   animation: svg-name-animation 3s ease-in forwards;
@@ -52,9 +56,9 @@ header {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   position: relative;
-  transform: scale(1.5);
-  right: 10%;
-  top: 60%;
+  width: 80%;
+  height: auto;
+  top: 30%;
   z-index: 1;
   animation: svg-name-animation 3s ease-in forwards;
   animation-delay: 1s;
@@ -89,5 +93,17 @@ header {
   100% {
     stroke-dashoffset: 0;
     fill: rgba($color: #ffffff, $alpha: 1.0);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    nav {
+      padding: 20px 0px;
+      div {
+        width: 100%;
+        justify-content: space-around;
+      }
+    }
   }
 }
