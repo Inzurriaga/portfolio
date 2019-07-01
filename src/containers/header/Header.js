@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { ReactComponent as SvgBackground } from "../../assets/trianglify.svg"; 
 import { ReactComponent as SvgFirstName } from "../../assets/firstName.svg";
 import { ReactComponent as SvgLastName } from "../../assets/lastName.svg";
+import { ReactComponent as Arrow } from "../../assets/arrow.svg";
 
 export class Header extends Component {
   constructor() {
@@ -47,6 +48,8 @@ export class Header extends Component {
         <SvgBackground style={{top: this.state.svgTop}} className="background-svg"/>
         <SvgFirstName className="name-first"/>
         <SvgLastName className="name-last"/>
+        <Arrow className="first-arrow"/>
+        <Arrow className="second-arrow"/>
         <nav style={{backgroundColor: `rgba(69, 69, 69, ${this.state.navOpacity})`}}>
           <div>
             <a href="#about">About</a>

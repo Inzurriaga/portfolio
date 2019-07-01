@@ -56,10 +56,23 @@
   }
 }
 
-@media screen and (max-width: 850) {
+@media screen and (max-width: 850px) {
   .projects-container {
+    padding: 10px 0px;
     article {
       width: 100%;
+      border-radius: 0;
+      &:nth-child(even) {
+        border-radius: 0;
+      }
+    }
+
+    .project-animation {
+      opacity: 1;
+      right: 0px;
+      &:nth-child(even) {
+        left: 0px;
+      }
     }
   }
 }

@@ -1,5 +1,6 @@
 header {
   height: 100%;
+  position: relative;
   nav {
     padding: 20px;
     display: flex;
@@ -64,6 +65,30 @@ header {
   animation-delay: 1s;
 }
 
+.first-arrow {
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+  opacity: 0;
+  right: 0;
+  margin: auto;
+  transform: rotate(90deg) scale(0.25);
+  z-index: 2;
+  animation: first-arrow-animation 3s ease-in-out infinite, fade-in 2s 3.5s linear forwards;
+}
+
+.second-arrow {
+  position: absolute;
+  bottom: -7%;
+  left: 0;
+  opacity: 0;
+  right: 0;
+  margin: auto;
+  transform: rotate(90deg) scale(0.15);
+  z-index: 2;
+  animation: second-arrow-animation 3s 0.5s ease-in-out infinite, fade-in 2s 3.5s linear forwards;
+}
+
 .background-svg >  path {
   @for $i from 1 through 200 {
     &:nth-child(#{$i}) {
@@ -93,6 +118,36 @@ header {
   100% {
     stroke-dashoffset: 0;
     fill: rgba($color: #ffffff, $alpha: 1.0);
+  }
+}
+
+@keyframes first-arrow-animation {
+  0% {
+    transform: translateY(0) rotate(90deg) scale(0.25);
+  }
+  50% {
+    transform: translateY(5%) rotate(90deg) scale(0.25);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg) scale(0.25);
+  }
+}
+
+@keyframes second-arrow-animation {
+  0% {
+    transform: translateY(0) rotate(90deg) scale(0.15);
+  }
+  50% {
+    transform: translateY(5%) rotate(90deg) scale(0.15);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg) scale(0.15);
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
   }
 }
 
