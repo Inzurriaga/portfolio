@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import gears from "../../assets/gears.png"
+import { ReactComponent as Github } from "../../assets/github.svg";
+import { ReactComponent as Internet } from "../../assets/internet.svg";
+import pokemon from "../../assets/pokemon.png";
 
 export class PokemonProject extends Component {
   constructor() {
@@ -26,9 +28,13 @@ export class PokemonProject extends Component {
       <article className={`pokemon ${this.state.class}`}>
         <h4>React Web Application</h4>
         <h3>Pokemon TCG</h3>
-        <p>A Web Application that's under construction that will involve the pokemon TCG API.</p>
+        <p>An application which allows users to search their favorite Pokémon cards. users can view the card image and information about the card. The application uses the Pokemon TCG API for the data.</p>
         <div className="image">
-          <img src={gears} alt="gears" />
+          <img src={pokemon} alt="pokemon" />
+        </div>
+        <div className="link">
+          <a href="https://github.com/Inzurriaga/pokemon-tcg"><Github />GitHub</a>
+          <a href="https://pokemontcg-gabe.herokuapp.com/"><Internet />live</a>
         </div>
       </article>
     )

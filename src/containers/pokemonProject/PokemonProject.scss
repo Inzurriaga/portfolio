@@ -30,4 +30,36 @@
         width: 60%;
         }
     }
+    .link {
+      grid-area: tech;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      a {
+        color: #ffffff;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        grid-area: tech;
+        height: 50px;
+        width: 150px;
+        text-decoration: none;
+        outline: none;
+        background: #23282e;
+        border-radius: 5px;
+        svg {
+          fill: #ffffff;
+          height: 30px;
+          width: 30px;
+        }
+        &:hover {
+          color: #bdbdbd;
+          svg {
+            fill: #bdbdbd;
+          }
+        }
+      }
+    }
 }
