@@ -14,9 +14,5 @@ body, html, #root {
 @import "./containers/header/Header.scss";
 @import "./containers/about/About.scss";
 @import "./containers/projectsContainer/ProjectsContainer.scss";
-@import "./containers/barstockProject/BarstockProject.scss";
-@import "./containers/movieProject/MovieProject.scss";
-@import "./containers/recipeProject/RecipeProject.scss";
-@import "./containers/thesaurusProject/ThesaurusProject.scss";
-@import "./containers/pokemonProject/PokemonProject.scss";
+@import "./containers/projectCard/ProjectCard.scss";
 @import "./containers/footer/Footer.scss";

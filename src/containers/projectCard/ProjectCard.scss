@@ -1,12 +1,12 @@
-.recipe {
+.project-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 50px 50px 200px 100px;
-  grid-template-areas: 
-    "type image"
-    "title image"
-    "description image"
-    "tech image";
+  grid-template-areas:
+    "image type" 
+    "image title"
+    "image description"
+    "image tech";
     h3 {
       grid-area: title;
     }
@@ -18,6 +18,7 @@
     p {
       font-family: 'lato',Helvetica,Arial;
       grid-area: description;
+      margin-bottom: 0;
     }
     .image {
       grid-area: image;
@@ -63,3 +64,29 @@
       }
     }
 }
+
+@media screen and (max-width: 600px) {
+  .project-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px 200px 100px 1fr;
+    grid-template-areas:
+      "type type" 
+      "title title"
+      "image image"
+      "description description"
+      "tech tech";
+      .image {
+        grid-area: image;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        img {
+          width: auto;
+          height: 100%;
+          }
+      }
+  }
+} 
